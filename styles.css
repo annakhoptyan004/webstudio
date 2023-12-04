@@ -1,12 +1,59 @@
-.team-position {
-  margin-top: 188px;
-  max-width: 1170px;
+:root {
+  --title-color: #212121;
+  --text-color: #757575;
+  --text-color-white: #ffffff;
+  --text-BG-color: #2196f3;
+  --WEB-BG-color: #2196f3;
 }
+
+body {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.team {
+  background-color: #f5f4fa;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .features {
   padding-top: 94px;
   padding-bottom: 94px;
 }
 
+.service {
+  padding-bottom: 94px;
+  padding-top: 94px;
+}
 .features-item {
   width: 270px;
 }
@@ -19,12 +66,6 @@
 .header-position {
   display: flex;
   align-items: center;
-}
-.team-list {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  width: 1170px;
 }
 .service-list {
   display: flex;
@@ -162,9 +203,13 @@
 }
 .nav-link:hover,
 .nav-link:focus {
-  color: #2196f3;
+  color: var(--text-BG-color);
 }
 .nav-link {
+  color: var(--title-color);
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.28px;
   text-decoration: none;
 }
 .hero-title {
@@ -175,11 +220,10 @@
   line-height: 60px;
 }
 .hero-button {
-  font-family: "Roboto";
-  font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 30px;
+  border: none;
 }
 .features-list {
   list-style: none;
@@ -199,6 +243,7 @@
   line-height: 16px;
   text-transform: uppercase;
   color: #212121;
+  margin-top: 30px;
 }
 .features-description {
   font-family: "Roboto";
@@ -207,6 +252,7 @@
   font-size: 14px;
   line-height: 24px;
   color: #757575;
+  margin-top: 10px;
 }
 .service-title {
   font-family: "Roboto";
@@ -217,7 +263,7 @@
   color: #212121;
 }
 .service-list {
-  list-style: none;
+  margin-top: 50px;
 }
 .team-title {
   font-family: "Roboto";
@@ -228,7 +274,16 @@
   color: #212121;
 }
 .team-list {
-  list-style: none;
+  display: flex;
+  margin-left: -30px;
+}
+
+.team-item {
+  /* height: 430px; */
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  margin-top: 50px;
+  flex-basis: calc((100% - 120px) / 4);
 }
 .team-name {
   font-family: "Roboto";
@@ -237,14 +292,18 @@
   font-size: 16px;
   line-height: 19px;
   color: #212121;
+  text-align: center;
+  @extend %main-fonts;
+  font-weight: 500px;
+  font-size: 16px;
+  margin-bottom: 10px;
 }
 .team-name-position {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
   font-size: 16px;
-  line-height: 19px;
-  color: #757575;
+  line-height: 1.19;
+  color: var(--text-color);
+  margin-top: 10px;
+  text-align: center;
 }
 .footer-logo {
   font-family: "Raleway";
@@ -314,4 +373,14 @@
   width: 170px;
   height: 90px;
   outline: solid, 1px, #afb1b8;
+}
+
+.socials-list {
+  display: flex;
+  column-gap: 34px;
+  margin-top: 28px;
+}
+
+.team-container {
+  padding: 30px 32px;
 }
